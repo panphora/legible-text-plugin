@@ -8,6 +8,16 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 42px;
+  text-align: center;
+  margin: 4rem 0 5rem;
+}
+
 .container { 
   margin: 0 auto;
   max-width: 1200px;
@@ -25,7 +35,6 @@ html {
 }
 
 .overlay-text {
-  font-family: sans-serif;
   font-weight: bold;
   font-size: 48px;
 }
