@@ -2,7 +2,7 @@
 
 ### Demo:
 
-
+[Legible Text Plugin Demo](https://panphora.github.io/legible-text-plugin/)
 
 ### Usage:
 
