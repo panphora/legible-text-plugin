@@ -1,9 +1,32 @@
-# Image brightness / luminosity normalizer for text over image
+# Create overlays on top of images while keeping your text legible
 
-In a work project, the UI guys had defined large parts of the interface as text over image. To improve legibility, I experimented with ways to automatically darken an image based on its original brightness.
+### Usage:
 
-You can hover over an image to view it without the overlay, and see the percentage brightness found by the calculation.
+Include the plugin's css in your `<head>`:
 
-*Credits to [matkl](https://github.com/matkl/average-color/) for the "average" color calculation and to [Franci Penov](https://stackoverflow.com/a/596241/3083792) for the brightness calculation based on that color.*
+```html
+  <link rel="stylesheet" type="text/css" href="legible-text-plugin.css">
+```
 
-Demo : [https://antoningrele.github.io/img-brightness-normalization/](https://antoningrele.github.io/img-brightness-normalization/)
+Include the plugin's js in your `<body>` somewhere before your own js loads:
+
+```html
+  <script src="legible-text-plugin.js" type="text/javascript"></script>
+```
+
+Add an image to your page with an `.overlay` element and some white overlay text inside of it:
+
+```html
+<div class="legible-text-area" style="background: url('images/some-image.jpg');">
+  <div class="overlay"></div>
+  <span class="overlay-text">Hello there, I'm some legible text over an image!</span>
+</div>
+```
+
+Initialize the plugin in your own js file, passing in the source element (with the image background on it) and the overlay element (to which the dynamic opacity will be applied):
+
+```javascript
+document.querySelectorAll('.legible-text-area').forEach(function(elem) {
+  applyLegibleOpacityToElement(elem, elem.querySelector(".overlay"));
+});
+```
