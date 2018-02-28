@@ -1,4 +1,4 @@
-# Create overlays on top of images while keeping your text legible
+# Create overlays with dynamic opacity so your text stays perfectly legible when placed over an image
 
 ### Demo:
 
